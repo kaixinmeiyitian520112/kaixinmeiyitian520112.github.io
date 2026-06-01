@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .image-section {
+            margin: 30px 0;
+        }
+        
+        .image-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .image-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .image-card p {
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        
+        .demo-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .absolute-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .blog-post {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+        
+        .blog-post h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        
+        .blog-post article {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .blog-post article h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .blog-post article p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://imagecdn.gaopinimages.com/image-preview/133134387414.jpg_l.webp" alt="头像" class="profile-img">
+            <h1>欢迎来到我的博客</h1>
+            <p>分享技术与生活</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro">
+                <h2>关于我</h2>
+                <p>大家好！我是一名热爱编程的技术爱好者。这个博客将记录我在Web开发、编程学习过程中的心得与体会。希望能和大家一起交流学习，共同进步！</p>
+            </div>
+            
+            <div class="image-section">
+                <h2 style="color:#667eea; margin-bottom:20px;">📷 图片展示</h2>
+                
+                <!-- 绝对路径图片示例（来自网络） -->
+                <div class="image-card">
+                    <h3>✨ 绝对路径图片</h3>
+                    <img class="absolute-img" src="https://imagecdn.gaopinimages.com/image-preview/133132113534.jpg_l.webp" alt="绝对路径图片示例">
+                    <p>图片来源：https://imagecdn.gaopinimages.com/image-preview/133132113534.jpg_l.webp（网络图片绝对路径）</p>
+                    <p style="background:#e8e8e8; padding:5px; border-radius:5px; font-family:monospace;">
+                        引用方式：src="https://imagecdn.gaopinimages.com/image-preview/133132113534.jpg_l.webp"
+                    </p>
+                </div>
+                
+                <!-- 相对路径图片示例（需要上传图片到images文件夹） -->
+                <div class="image-card">
+                    <h3>🖼️ 相对路径图片</h3>
+                    <img class="demo-img" src="image.webp" alt="相对路径图片示例" onerror="this.src='https://placehold.co/500x300/667eea/white?text=Sample+Image'">
+                    <p>图片来源：本地 image.webp（相对路径引用）</p>
+                    <p style="background:#e8e8e8; padding:5px; border-radius:5px; font-family:monospace;">
+                        引用方式：src="image.webp"
+                    </p>
+                </div>
+            </div>
+            
+            <div class="blog-post">
+                <h2>📝 最新文章</h2>
+                <article>
+                    <h3>GitHub Pages 初体验</h3>
+                    <p>今天成功部署了我的第一个GitHub Pages博客！GitHub Pages是一个非常方便的静态网站托管服务，完全免费，只需要一个GitHub账号就可以开始你的博客之旅...</p>
+                    <small>2024年1月15日</small>
+                </article>
+                <article>
+                    <h3>HTML & CSS 学习心得</h3>
+                    <p>最近在学习前端开发，HTML和CSS是基础中的基础。掌握了它们，就能搭建出漂亮的网页。相对路径和绝对路径的区别需要特别注意...</p>
+                    <small>2024年1月10日</small>
+                </article>
+                <article>
+                    <h3>前端开发学习路线</h3>
+                    <p>从HTML/CSS到JavaScript，再到框架，分享我的前端学习经验和资源推荐...</p>
+                    <small>2024年1月5日</small>
+                </article>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 我的个人博客 | 使用 GitHub Pages 托管</p>
+            <p>📧 联系我：example@email.com</p>
+        </footer>
+    </div>
+</body>
+</html>
